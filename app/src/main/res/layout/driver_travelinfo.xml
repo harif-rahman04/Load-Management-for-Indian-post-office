@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    tools:context="com.example.hrf_rahmana.hk1.Driver_TravelInfo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp">
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="0dp"
+                            android:src="@drawable/indiapostlogo" />
+                        <ImageView
+                            android:layout_marginTop="18dp"
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/em"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="0dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginLeft="17dp"
+                    android:orientation="vertical"
+                    android:background="#FFFFEC20"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FFF92825"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="11dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="31dp"
+            app:cardElevation="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="23dp"
+                    android:gravity="center"
+                    android:text="Load Request"
+                    android:textColor="#000"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/vechid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_above="@id/place_autocomplete_fragment"
+                    android:layout_weight="1">
+                    <EditText
+                        android:id="@+id/vehicleid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12.5dp"
+                        android:layout_marginLeft="12.5dp"
+                        android:hint="Vehicle ID"
+                        android:textColor="#000" />
+                </android.support.design.widget.TextInputLayout>
+
+                <fragment
+                    android:id="@+id/fromplace_autocomplete_fragment"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_above="@id/toautocompletefragment"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:layout_weight="1" />
+
+                <fragment
+                    android:id="@+id/toautocompletefragment"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginRight="12.5dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/toautocompletefragment"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16.5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Load Quantity   :"
+                        android:textColor="#000"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/loadper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/toautocompletefragment"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="1"
+                        android:gravity="center"></Spinner>
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/detailsbut"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_check_black_24dp"
+        android:background="@drawable/circle_button" />
+</RelativeLayout>

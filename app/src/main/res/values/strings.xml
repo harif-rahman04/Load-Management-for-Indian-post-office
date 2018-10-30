@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">hk1</string>
+    <string name="title_activity_maps">Map</string>
+    <string-array name="load_weight">
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="status_of_availability">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+</resources>
